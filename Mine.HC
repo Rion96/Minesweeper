@@ -4,9 +4,8 @@
 
 
 
-
 U64 sprites[]	 = {<1>,<2>,<3>,<4>,<5>,
-					<7>,<8>,<9>,<10>,<11>,<12>,<6>};
+		    <7>,<8>,<9>,<10>,<11>,<12>,<6>};
 
 
 
@@ -223,7 +222,7 @@ GrPrint(dc,25+width*6,25,"Press ESC to quit");
 
 dc->color=BLACK;
 
-for(f=0;f<=tileSize;f++){
+for(f=0;f<tileSize;f++){
   Sprite3(dc,x,y,0,smallBV[f]);
   x = (x+12);
   if(x-100==12*width){
@@ -283,7 +282,7 @@ U0 ResetBoard(){
   GameOver=FALSE;
   Loss=FALSE;
   nrMines=nrMines2;
-  for(f=0;f<=tileSize;f++){
+  for(f=0;f<tileSize;f++){
     smallBoard[f]=0;
     smallBV[f]=0;
   }
